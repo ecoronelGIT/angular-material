@@ -12,9 +12,10 @@ import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawe
 })
 export class ProductCartModule {
   constructor(private injector: Injector) {
-    const productcart = createCustomElement(ProductCartComponent, { injector });
-    customElements.define('product-cart', productcart);
   }
 
-  ngDoBootstrap() {}
+  ngDoBootstrap() {
+    const productcart = createCustomElement(ProductCartComponent, { injector: this.injector });
+    customElements.define('product-cart', productcart);
+  }
 }

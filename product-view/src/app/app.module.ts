@@ -7,13 +7,15 @@ import { ProductViewComponent } from './productview/productview.component';
 @NgModule({
   declarations: [ProductViewComponent],
   imports: [BrowserModule],
+  bootstrap: [],
   entryComponents: [ProductViewComponent]
 })
 export class ProductViewModule {
   constructor(private injector: Injector) {
-    const productView = createCustomElement(ProductViewComponent, { injector });
-    customElements.define('product-view', productView);
   }
 
-  ngDoBootstrap() {}
+  ngDoBootstrap() {
+    const productView = createCustomElement(ProductViewComponent, { injector : this.injector });
+    customElements.define('product-view', productView);
+  }
 }

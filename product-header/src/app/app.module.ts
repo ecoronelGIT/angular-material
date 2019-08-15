@@ -11,9 +11,10 @@ import { ProductHeaderComponent } from './productheader/productheaer.component';
 })
 export class ProductHeaderModule {
   constructor(private injector: Injector) {
-    const productHeader = createCustomElement(ProductHeaderComponent, { injector });
-    customElements.define('product-header', productHeader);
   }
 
-  ngDoBootstrap() {}
+  ngDoBootstrap() {
+    const productHeader = createCustomElement(ProductHeaderComponent, { injector: this.injector });
+    customElements.define('product-header', productHeader);
+  }
 }
