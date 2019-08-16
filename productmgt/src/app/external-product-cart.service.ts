@@ -18,6 +18,7 @@ export class ExternalProductCartService {
 
         const script = document.createElement('script');
         script.src = '/assets/product-cart.js';
+        script.defer = true;
         document.body.appendChild(script);
         this.loaded = true;
     }
