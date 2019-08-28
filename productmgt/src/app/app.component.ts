@@ -1,7 +1,7 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 import {ExternalProductViewService} from './external-product-view.service';
-import {ExternalProductCartService} from "./external-product-cart.service";
-import {ExternalProductHeaderService} from "./external-product-header.service";
+import {ExternalProductCartService} from './external-product-cart.service';
+import {ExternalProductHeaderService} from './external-product-header.service';
 
 @Component({
   selector: 'app-root',

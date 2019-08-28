@@ -18,6 +18,7 @@ export class ExternalProductHeaderService {
 
         const script = document.createElement('script');
         script.src = '/assets/product-header.js';
+        script.defer = true;
         document.body.appendChild(script);
         this.loaded = true;
     }
