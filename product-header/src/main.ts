@@ -1,11 +1,11 @@
-import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { ProductHeaderModule } from './app/app.module';
 import { environment } from './environments/environment';
 
 if (environment.production) {
-  enableProdMode();
+  // Let the host app decide about prod mode
+  // enableProdMode();
 }
 
 platformBrowserDynamic().bootstrapModule(ProductHeaderModule)

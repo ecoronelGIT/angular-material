@@ -8,7 +8,6 @@ const app = express();
 app.use(express.static(__dirname + '/dist'));
 
 app.get('/*', function(req,res) {
-    console.log('__dirname:'+__dirname);
 res.sendFile(path.join(__dirname+'/dist/index.html'));
 });
 
